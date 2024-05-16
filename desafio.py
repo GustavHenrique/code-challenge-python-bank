@@ -49,6 +49,10 @@ class PessoaFisica(Cliente):
         self.data_nascimento = data_nascimento
         self.cpf = cpf
 
+    def __repr__(self):
+        return f"<{self.__class__.__name__}: ('{self.nome}', '{self.cpf}')>"
+
+
 class Conta:
     def __init__(self, numero, cliente):
         self._saldo = 0
